@@ -18,6 +18,10 @@ body {
     color: rgb(96, 96, 96)
 }
 
+.dont-display {
+    display: none;
+}
+
 #YouTube-logo{
     width: 100px;
     margin-left: 15px;
@@ -66,8 +70,6 @@ body {
 }
 
 /* HEADER ENDS */
-
-
 
 
 /* SIDE BAR */
@@ -126,7 +128,7 @@ hr{
     width: 100%;
     height: 100%;
     padding: 15px 25px;
-    border-top: 15px 25px;
+    border-top: 15px 15px;
     border-top: 1px solid #ddd;
     overflow-y: scroll;
 }
@@ -136,13 +138,13 @@ hr{
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    /*justify-content: flex-start;*/
 }
 
 
 .video {
     width: 310px;
-    margin-right: 6px;
+    margin-right: 2.5px;
+    margin-left: 2.5px;
     margin-bottom: 30px;
 }
 
@@ -186,5 +188,40 @@ hr{
     text-decoration: none;
     color: rgb(96, 96, 96);
     font-size: 14px;
+}
 
+/* Responsive*/
+
+
+@media (max-width: 500px) {
+    .header_search{
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header_icons .material-icons {
+        display: none;
+    }
+
+    .header_icons .display-this {
+        display: inline;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header_search {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .dont-display {
+        display:inline;
+    }
 }
